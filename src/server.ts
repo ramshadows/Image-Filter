@@ -35,7 +35,7 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
 
   //  http://drive.google.com/uc?id=1pZqz5HDU7x4BF7Ye3dQYUjJ7mCaMwTyf
 
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage", async (req:express.Request, res:express.Response) => {
     let image_url: string = req.query.image_url;
     //Validate image url
     const isValideUrl: any = image_url.match(
